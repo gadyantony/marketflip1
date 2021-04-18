@@ -1,2 +1,25 @@
-
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+    <button mat-icon-button class="icon" aria-label="Button" type="button" (click)="drawer.toggle()" >
+        <mat-icon>menu</mat-icon>
+      </button>
+    <span>Market Flip</span>
+</mat-toolbar>
+<mat-sidenav-container class="" >
+    <mat-sidenav #drawer mode="push" class="container" role="navigation">
+        <mat-nav-list>
+            <mat-list-item>
+                <mat-icon mat-list-icon>home</mat-icon>   
+                <a routerLink="/home" routerLinkActive="active" (click)="drawer.close()"> Home </a>  
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon mat-list-icon>verified_user</mat-icon>   
+                <a routerLink="/testdash" routerLinkActive="active"  (click)="drawer.close()"> Login </a>  
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <main>
+             <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>-->
+</mat-sidenav-container>
